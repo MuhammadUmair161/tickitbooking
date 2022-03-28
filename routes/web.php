@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\logincontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-})->name('home');
+Route::get('/', function () {return view('user.index');})->name('home');
+
+// -----------login
+
+Route::get('login', [logincontroller::class,'index'])->name('login');
+Route::get('signup', [logincontroller::class,'signup'])->name('signup');
