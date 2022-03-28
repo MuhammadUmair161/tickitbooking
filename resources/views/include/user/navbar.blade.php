@@ -117,7 +117,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">contact</a>
+                        <a href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
                     <li class="header-button pr-0">
                         <a href="{{ route('login') }}">join us</a>

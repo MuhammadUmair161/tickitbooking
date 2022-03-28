@@ -16,6 +16,7 @@ use App\Http\Controllers\logincontroller;
 */
 
 Route::get('/', function () {return view('user.index');})->name('home');
+Route::get('/dashboard', function () {return view('admin.index');})->name('dashboard');
 
 // -----------login
 
