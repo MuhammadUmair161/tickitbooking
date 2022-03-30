@@ -16,7 +16,7 @@
             @include('include/admin/navbar')
             <!-- Navbar -->
             <div class="content">
-                {{-- @yield('main') --}}
+                @yield('main')
             </div>
             <!-- footer -->
             @include('include/admin/footer')

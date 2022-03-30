@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="{{ asset('user/assets/css/jquery.animatedheadline.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/main.css') }}">
     <link rel="shortcut icon" href="{{ asset('user/assets/images/favicon.png') }}" type="image/x-icon">
-
-    <title>Ticket Booking | @yield('title')</title>
+    
+    {{-- <title>Ticket Booking | @yield('title')</title> --}}
+    <title> {{ Config('app.name'); }} | @yield('title')</title>
     
 </head>

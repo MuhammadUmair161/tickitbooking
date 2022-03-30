@@ -3,7 +3,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <img src="user/assets/images/logo/logo.png" alt="logo">
                     </a>
                 </div>
@@ -20,33 +20,7 @@
                         </ul> --}}
                     </li>
                     <li>
-                        <a href="#0">movies</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="movie-grid.html">Movie Grid</a>
-                            </li>
-                            <li>
-                                <a href="movie-list.html">Movie List</a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">Movie Details</a>
-                            </li>
-                            <li>
-                                <a href="movie-details-2.html">Movie Details 2</a>
-                            </li>
-                            <li>
-                                <a href="movie-ticket-plan.html">Movie Ticket Plan</a>
-                            </li>
-                            <li>
-                                <a href="movie-seat-plan.html">Movie Seat Plan</a>
-                            </li>
-                            <li>
-                                <a href="movie-checkout.html">Movie Checkout</a>
-                            </li>
-                            <li>
-                                <a href="popcorn.html">Movie Food</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('movie') }}">movies</a>
                     </li>
                     <li>
                         <a href="#0">events</a>
