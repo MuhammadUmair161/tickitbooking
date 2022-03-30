@@ -139,14 +139,17 @@
                         <div class="tab-area">
                             <div class="tab-item active">
                                 <div class="row mb-10 justify-content-center">
-                                    <div class="col-sm-6 col-lg-4">
-                                        @include('include\user\cards\movie\card1')
-                                    </div>
+                                    @foreach ($movies as $item)
+                                        <div class="col-sm-6 col-lg-4">
+                                            @include('include\user\cards\movie\card1')
+                                        </div>
+                                    @endforeach
                                     <div class="col-sm-6 col-lg-4">
                                         <div class="movie-grid">
                                             <div class="movie-thumb c-thumb">
                                                 <a href="movie-details.html">
-                                                    <img src="{{ asset('user/assets/images/movie/movie02.jpg') }}" alt="movie">
+                                                    <img src="{{ asset('user/assets/images/movie/movie02.jpg') }}"
+                                                        alt="movie">
                                                 </a>
                                             </div>
                                             <div class="movie-content bg-one">
@@ -174,7 +177,8 @@
                                         <div class="movie-grid">
                                             <div class="movie-thumb c-thumb">
                                                 <a href="movie-details.html">
-                                                    <img src="{{ asset('user/assets/images/movie/movie03.jpg') }}" alt="movie">
+                                                    <img src="{{ asset('user/assets/images/movie/movie03.jpg') }}"
+                                                        alt="movie">
                                                 </a>
                                             </div>
                                             <div class="movie-content bg-one">
@@ -202,7 +206,8 @@
                                         <div class="movie-grid">
                                             <div class="movie-thumb c-thumb">
                                                 <a href="movie-details.html">
-                                                    <img src="{{ asset('user/assets/images/movie/movie04.jpg') }}" alt="movie">
+                                                    <img src="{{ asset('user/assets/images/movie/movie04.jpg') }}"
+                                                        alt="movie">
                                                 </a>
                                             </div>
                                             <div class="movie-content bg-one">
@@ -230,13 +235,16 @@
                             </div>
                             <div class="tab-item">
                                 <div class="movie-area mb-10">
-                                    @include('include\user\cards\movie\card2')
+                                    @foreach ($movies as $item)
+                                        @include('include\user\cards\movie\card2')
+                                    @endforeach
                                     <div class="movie-list">
                                         <div class="movie-thumb c-thumb">
                                             <a href="movie-details.html" class="w-100 bg_img h-100"
-                                            data-background="{{ asset('user/assets/images/movie/movie02.jpg') }}">
-                                            <img class="d-sm-none" src="{{ asset('user/assets/images/movie/movie02.jpg') }}" alt="movie">
-                                        </a>
+                                                data-background="{{ asset('user/assets/images/movie/movie02.jpg') }}">
+                                                <img class="d-sm-none"
+                                                    src="{{ asset('user/assets/images/movie/movie02.jpg') }}" alt="movie">
+                                            </a>
                                         </div>
                                         <div class="movie-content bg-one">
                                             <h5 class="title">
@@ -297,9 +305,10 @@
                                     <div class="movie-list">
                                         <div class="movie-thumb c-thumb">
                                             <a href="movie-details.html" class="w-100 bg_img h-100"
-                                            data-background="{{ asset('user/assets/images/movie/movie03.jpg') }}">
-                                            <img class="d-sm-none" src="{{ asset('user/assets/images/movie/movie03.jpg') }}" alt="movie">
-                                        </a>
+                                                data-background="{{ asset('user/assets/images/movie/movie03.jpg') }}">
+                                                <img class="d-sm-none"
+                                                    src="{{ asset('user/assets/images/movie/movie03.jpg') }}" alt="movie">
+                                            </a>
                                         </div>
                                         <div class="movie-content bg-one">
                                             <h5 class="title">
@@ -361,7 +370,8 @@
                                         <div class="movie-thumb c-thumb">
                                             <a href="movie-details.html" class="w-100 bg_img h-100"
                                                 data-background="{{ asset('user/assets/images/movie/movie04.jpg') }}">
-                                                <img class="d-sm-none" src="{{ asset('user/assets/images/movie/movie04.jpg') }}" alt="movie">
+                                                <img class="d-sm-none"
+                                                    src="{{ asset('user/assets/images/movie/movie04.jpg') }}" alt="movie">
                                             </a>
                                         </div>
                                         <div class="movie-content bg-one">

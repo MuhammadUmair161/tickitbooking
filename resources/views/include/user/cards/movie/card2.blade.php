@@ -1,13 +1,13 @@
 <div class="movie-list">
     <div class="movie-thumb c-thumb">
         <a href="movie-details.html" class="w-100 bg_img h-100"
-        data-background="{{ asset('user/assets/images/movie/movie01.jpg') }}">
-        <img class="d-sm-none" src="{{ asset('user/assets/images/movie/movie01.jpg') }}" alt="movie">
+        data-background="{{ asset('storage/'.$item->poster) }}">
+        <img class="d-sm-none" src="{{ asset('storage/'.$item->poster) }}" alt="movie">
     </a>
     </div>
     <div class="movie-content bg-one">
         <h5 class="title">
-            <a href="movie-details.html">alone</a>
+            <a href="movie-details.html">{{ $item->name }}</a>
         </h5>
         <p class="duration">2hrs 50 min</p>
         <div class="movie-tags">
@@ -16,7 +16,7 @@
             <a href="#0">fantasy</a>
         </div>
         <div class="release">
-            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+            <span>Release Date : </span> <a href="#0">{{ $item->released_at }}</a>
         </div>
         <ul class="movie-rating-percent">
             <li>

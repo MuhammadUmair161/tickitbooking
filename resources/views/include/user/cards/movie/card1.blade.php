@@ -1,12 +1,12 @@
 <div class="movie-grid">
     <div class="movie-thumb c-thumb">
         <a href="movie-details.html">
-            <img src="{{ asset('user/assets/images/movie/movie01.jpg') }}" alt="movie">
+            <img src="{{ asset('storage/'.$item->poster) }}" alt="movie">
         </a>
     </div>
     <div class="movie-content bg-one">
         <h5 class="title m-0">
-            <a href="movie-details.html">alone</a>
+            <a href="movie-details.html">{{ $item->name }}</a>
         </h5>
         <ul class="movie-rating-percent">
             <li>

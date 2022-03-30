@@ -26,9 +26,6 @@
                     <div class="tab-item active">
                         <div class="owl-carousel owl-theme tab-slider">
                             <div class="item">
-                                @include('include\user\cards\movie\card1')
-                            </div>
-                            <div class="item">
                                 <div class="movie-grid">
                                     <div class="movie-thumb c-thumb">
                                         <a href="#0">

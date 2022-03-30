@@ -20,7 +20,7 @@
                         </ul> --}}
                     </li>
                     <li>
-                        <a href="{{ route('movie') }}">movies</a>
+                        <a href="{{ route('m-list') }}">movies</a>
                     </li>
                     <li>
                         <a href="#0">events</a>

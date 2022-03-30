@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
-
+use App\Http\Controllers\movieCotroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +16,17 @@ use App\Http\Controllers\logincontroller;
 */
 
 Route::get('/', function () {return view('user.index');})->name('home');
-Route::get('/movie', function () {return view('user.movie.index');})->name('movie');
+// Route::get('/movie', function () {return view('user.movie.index');})->name('movie');
 Route::get('/dashboard', function () {return view('admin.index');})->name('dashboard');
 
 // -----------login
 
 Route::get('login', [logincontroller::class,'index'])->name('login');
 Route::get('signup', [logincontroller::class,'signup'])->name('signup');
+
+// -----------Movie
+Route::get('movie', [movieCotroller::class,'list'])->name('m-list');
+Route::get('movie-create', [movieCotroller::class,'index'])->name('m-create');
+Route::post('movie-submit', [movieCotroller::class,'submit'])->name('m-submit');
+
+ 
