@@ -26,32 +26,7 @@
                     <div class="tab-item active">
                         <div class="owl-carousel owl-theme tab-slider">
                             <div class="item">
-                                <div class="movie-grid">
-                                    <div class="movie-thumb c-thumb">
-                                        <a href="#0">
-                                            <img src="user/assets/images/movie/movie01.jpg" alt="movie">
-                                        </a>
-                                    </div>
-                                    <div class="movie-content bg-one">
-                                        <h5 class="title m-0">
-                                            <a href="#0">alone</a>
-                                        </h5>
-                                        <ul class="movie-rating-percent">
-                                            <li>
-                                                <div class="thumb">
-                                                    <img src="user/assets/images/movie/tomato.png" alt="movie">
-                                                </div>
-                                                <span class="content">88%</span>
-                                            </li>
-                                            <li>
-                                                <div class="thumb">
-                                                    <img src="user/assets/images/movie/cake.png" alt="movie">
-                                                </div>
-                                                <span class="content">88%</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                @include('include\user\cards\movie\card1')
                             </div>
                             <div class="item">
                                 <div class="movie-grid">
