@@ -11,7 +11,6 @@ class movieCotroller extends Controller
 
     public function list(){
         $data = movie::all();
-        // dd($data);
         return view('user.movie.index')->with('movies', $data);
     }
     
@@ -26,6 +25,6 @@ class movieCotroller extends Controller
         $movie->trailer = $item['trailer'];
 
         $movie->save();
-        return redirect('m-list');
+        return redirect(route('m-list'));
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\movieCotroller;
@@ -15,7 +16,7 @@ use App\Http\Controllers\movieCotroller;
 |
 */
 
-Route::get('/', function () {return view('user.index');})->name('home');
+Route::get('/', [homeController::class,'trending'])->name('home');
 // Route::get('/movie', function () {return view('user.movie.index');})->name('movie');
 Route::get('/dashboard', function () {return view('admin.index');})->name('dashboard');
 
