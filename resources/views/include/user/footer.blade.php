@@ -54,7 +54,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-area">
                     <div class="left">
-                        <p>Copyright © 2020.All Rights Reserved By <a href="#0">Boleto </a></p>
+                        <p>Copyright © 2022.All Rights Reserved By <a href="#">Muhammad Umair</a></p>
                     </div>
                     <ul class="links">
                         <li>
