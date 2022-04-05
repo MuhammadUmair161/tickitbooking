@@ -27,6 +27,7 @@ Route::get('signup', [logincontroller::class,'signup'])->name('signup');
 
 // -----------Movie
 Route::get('movie', [movieCotroller::class,'list'])->name('m-list');
+Route::get('movie-detail/{id}', [movieCotroller::class,'detail'])->name('m-detail');
 Route::get('movie-create', [movieCotroller::class,'index'])->name('m-create');
 Route::post('movie-submit', [movieCotroller::class,'submit'])->name('m-submit');
 

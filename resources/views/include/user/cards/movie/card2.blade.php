@@ -1,6 +1,6 @@
 <div class="movie-list">
     <div class="movie-thumb c-thumb">
-        <a href="movie-details.html" class="w-100 bg_img h-100"
+        <a href="{{ route('m-detail', $item->id) }}" class="w-100 bg_img h-100"
         data-background="{{ asset('storage/'.$item->poster) }}">
         <img class="d-sm-none" src="{{ asset('storage/'.$item->poster) }}" alt="movie">
     </a>
@@ -50,7 +50,7 @@
                     </a>
                 </div>
                 <div class="react-item">
-                    <a href="#0" class="popup-video">
+                    <a href="{{ $item->trailer }}" class="video-popup">
                         <div class="thumb">
                             <img src="{{ asset('user/assets/images/icons/play-button.png') }}" alt="icons">
                         </div>

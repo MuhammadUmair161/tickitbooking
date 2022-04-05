@@ -1,6 +1,6 @@
 <div class="movie-grid">
     <div class="movie-thumb c-thumb">
-        <a href="movie-details.html">
+        <a href="{{ route('m-detail', $item->id) }}">
             <img src="{{ asset('storage/'.$item->poster) }}" alt="movie">
         </a>
     </div>

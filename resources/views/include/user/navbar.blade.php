@@ -4,7 +4,7 @@
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="{{ route('home') }}">
-                        <img src="user/assets/images/logo/logo.png" alt="logo">
+                        <img src="{{ asset('user/assets/images/logo/logo.png') }}" alt="logo">
                     </a>
                 </div>
                 <ul class="menu">

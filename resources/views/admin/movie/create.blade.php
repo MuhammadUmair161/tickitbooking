@@ -19,10 +19,21 @@
                                 <textarea class="form-control" placeholder="Description" name="desc" cols="10" rows="10"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="language" placeholder="language">
+                                <select class="text-capitalize selectpicker p-1" name="language" id="">
+                                    <option class="text-capitalize" disabled="" selected="">Language</option>
+                                    <option value="English">English</option>
+                                    <option value="Urdu">Urdu</option>
+                                    <option value="Hindi">Hindi</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="genre" placeholder="Genre">
+                                <select class="text-capitalize selectpicker p-1" name="genre" id="">
+                                    <option class="text-capitalize" disabled="" selected="">Genre</option>
+                                    <option value="Action">Action</option>
+                                    <option value="Horror">Horror</option>
+                                    <option value="Drama">Drama</option>
+                                    <option value="Comedy">Comedy</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <input type="date" class="form-control" name="released_at">
