@@ -12,6 +12,9 @@
             </a>
         </div>
         <ul class="nav">
+            <li class="">
+                <a href="{{ route('home') }}"><i class="tim-icons icon-components"></i><p>home</p></a>
+            </li>
             <li class="active">
                 <a href="{{ route('dashboard') }}"><i class="tim-icons icon-chart-pie-36"></i><p>Dashboard</p></a>
             </li>

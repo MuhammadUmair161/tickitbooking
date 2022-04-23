@@ -21,14 +21,16 @@ Route::get('/', [homeController::class,'trending'])->name('home');
 Route::get('/dashboard', function () {return view('admin.index');})->name('dashboard');
 
 // -----------login
+Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('login', [logincontroller::class,'index'])->name('login');
-Route::get('signup', [logincontroller::class,'signup'])->name('signup');
+// Route::get('login', [logincontroller::class,'index'])->name('login');
+// Route::get('signup', [logincontroller::class,'signup'])->name('signup');
 
 // -----------Movie
 Route::get('movie', [movieCotroller::class,'list'])->name('m-list');
+Route::get('movie-ticketPlan/{id}', [movieCotroller::class,'ticketPlan'])->name('m-ticketPlan');
 Route::get('movie-detail/{id}', [movieCotroller::class,'detail'])->name('m-detail');
 Route::get('movie-create', [movieCotroller::class,'index'])->name('m-create');
 Route::post('movie-submit', [movieCotroller::class,'submit'])->name('m-submit');
 
- 

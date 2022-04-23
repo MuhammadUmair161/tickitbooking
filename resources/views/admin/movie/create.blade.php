@@ -60,8 +60,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer text-center">
-                        <button type="submit" class="btn btn-primary w-50">save</button>
+                    <div class="card-footer text-center text-capitalize">
+                        <button type="submit" class="btn btn-primary text-capitalize w-50">save</button>
                     </div>
                 </form>
             </div>

@@ -9,6 +9,10 @@ class movieCotroller extends Controller
 {
     public function index(){return(view('admin.movie.create'));}
 
+    public function ticketPlan($id){
+        $data = movie::find($id);
+        return view('user.movie.ticketPlan')->with('movies', $data);
+    }
     public function detail($id){
         $data = movie::find($id);
         return view('user.movie.detail')->with('movies', $data);

@@ -93,9 +93,21 @@
                     <li>
                         <a href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
-                    <li class="header-button pr-0">
-                        <a href="{{ route('login') }}">join us</a>
-                    </li>
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="header-button pr-0">
+                                <a href="{{ route('login') }}">join us</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="header-button pr-0">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Logout</a>
+                        </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    @endguest
                 </ul>
                 <div class="header-bar d-lg-none">
                     <span></span>
