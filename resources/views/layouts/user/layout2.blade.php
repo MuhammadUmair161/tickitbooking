@@ -5,9 +5,9 @@
 <body>
     @include('include/user/navbar')
 
-    @include('include/user/banner/banner2')
+    @include('include/user/banner/banner3')
 
-    @include('include/user/ticketSearch')
+    {{-- @include('include/user/ticketSearch') --}}
 
     @yield('main')
 

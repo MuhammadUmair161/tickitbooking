@@ -22,6 +22,9 @@
                 <a href="{{ route('m-create') }}"><i class="tim-icons icon-triangle-right-17"></i><p>movie</p></a>
             </li>
             <li>
+                <a href="{{ route('blog-create') }}"><i class="tim-icons icon-single-copy-04"></i><p>blog</p></a>
+            </li>
+            <li>
                 <a data-toggle="collapse" href="#pagesExamples">
                     <i class="tim-icons icon-image-02"></i>
                     <p>

@@ -5,7 +5,7 @@
 <body>
     @include('include/user/navbar')
 
-    @include('include/user/banner')
+    @include('include/user/banner/banner')
 
     @include('include/user/ticketSearch')
 

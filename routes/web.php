@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\blogController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
@@ -33,4 +34,10 @@ Route::get('movie-ticketPlan/{id}', [movieCotroller::class,'ticketPlan'])->name(
 Route::get('movie-detail/{id}', [movieCotroller::class,'detail'])->name('m-detail');
 Route::get('movie-create', [movieCotroller::class,'index'])->name('m-create');
 Route::post('movie-submit', [movieCotroller::class,'submit'])->name('m-submit');
+// -----------Movie
+Route::get('blog', function () {return view('user.blog.blog');})->name('blog');
+Route::get('blog-create', [blogController::class,'index'])->name('blog-create');
+Route::post('blog-submit', [blogController::class,'submit'])->name('blog-submit');
+
+
 

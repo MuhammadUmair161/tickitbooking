@@ -80,15 +80,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#0">blog</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                                <a href="blog-details.html">Blog Single</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li>
                         <a href="{{ route('dashboard') }}">Dashboard</a>
@@ -100,14 +92,43 @@
                             </li>
                         @endif
                     @else
-                        <li class="header-button pr-0">
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">Logout</a>
+                        <li>
+                            {{-- <a href="#0"><img style="height: 200px; width:200px;" src="user/assets/images/blog/author.jpg" alt="#0"></a> --}}
+                            <a href="#0">{{ Auth::user()->name }}</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#0">{{ Auth::user()->name }}</a>
+                                </li>
+                                <li>
+                                    <a href="">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">Logout</a>
+                                </li>
+                            </ul>
                         </li>
+
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
                     @endguest
+                    {{-- @guest
+                        @if (Route::has('login'))
+                            <li class="header-button pr-0">
+                                <a href="{{ route('login') }}">join us</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="header-button pr-0">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Logout</a>
+                        </li>
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    @endguest --}}
                 </ul>
                 <div class="header-bar d-lg-none">
                     <span></span>
