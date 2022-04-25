@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('commits', function (Blueprint $table) {
             $table->id();
-            $table->string('fName');
-            $table->string('lName');
+            $table->text('commit');
+            $table->integer('contant_id');
             $table->unsignedBigInteger('user_id');
-            $table->text('image');
             $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('commits');
     }
 };
