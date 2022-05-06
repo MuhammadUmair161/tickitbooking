@@ -34,14 +34,13 @@
                         @endif
                     @else
                         <li>
-                            {{-- <a href="#0"><img style="height: 200px; width:200px;" src="user/assets/images/blog/author.jpg" alt="#0"></a> --}}
-                            <a href="#0">{{ Auth::user()->name }}</a>
+                            <a href="">{{ Auth::user()->name }}</a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="#0">{{ Auth::user()->name }}</a>
+                                    <a href="">{{ Auth::user()->name }}</a>
                                 </li>
                                 <li>
-                                    <a href="">Profile</a>
+                                    <a href="{{ route('profile-create') }}">Profile</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();

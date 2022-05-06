@@ -5,6 +5,7 @@ use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\movieCotroller;
+use App\Http\Controllers\profileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,10 @@ Route::get('/dashboard', function () {
 
 // -----------login
 Auth::routes();
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Route::get('login', [logincontroller::class,'index'])->name('login');
-// Route::get('signup', [logincontroller::class,'signup'])->name('signup');
+// -----------profile
+Route::get('profile', [profileController::class, 'index'])->name('profile');
+Route::get('profile-create', [profileController::class, 'create'])->name('profile-create');
+Route::post('profile-save', [profileController::class, 'save'])->name('profile-save');
 
 // -----------Movie
 Route::get('movie', [movieCotroller::class, 'list'])->name('m-list');

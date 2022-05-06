@@ -1,5 +1,5 @@
 @extends('layouts/user/layout2')
-@section('title', 'Blog')
+@section('title', 'profile')
 @section('main')
 
 @endsection
