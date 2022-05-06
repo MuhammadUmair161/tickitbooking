@@ -1,14 +1,14 @@
 <div class="post-item">
     <div class="post-thumb">
         <a href="blog-details.html">
-            <img src="{{ asset('user/assets/images/blog/blog01.jpg') }}" alt="blog">
+            <img src="{{ asset('storage/'. $item->image) }}" alt="blog">
         </a>
     </div>
     <div class="post-content">
         <div class="post-header">
             <h4 class="title">
                 <a href="blog-details.html">
-                    Increase Event Ticket Sales For Film Production With the Right Advertising Strategies
+                    {{ $item->title }}
                 </a>
             </h4>
             <div class="meta-post">
@@ -16,7 +16,7 @@
                 <a href="#0"><i class="flaticon-view"></i>466 View</a>
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac cursus leo. Nullam dolor nunc, hendrerit non velit id, pharetra viverra elit.
+                {{ $item->sub_title }}
             </p>
         </div>
         <div class="entry-content">
@@ -26,7 +26,7 @@
                     <div class="thumb">
                         <a href="#0"><img src="{{ asset('user/assets/images/blog/author.jpg') }}" alt="#0"></a>
                     </div>
-                    <h6 class="title"><a href="#0">Alvin Mcdaniel</a></h6>
+                    <h6 class="title"><a href="#0">{{ $item->user->name }}</a></h6>
                 </div>
             </div>
             <a href="#0" class="buttons">Read More <i class="flaticon-right"></i></a>

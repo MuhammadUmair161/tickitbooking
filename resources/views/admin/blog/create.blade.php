@@ -16,7 +16,10 @@
                                 <input type="text" class="form-control" name="title" placeholder="Title">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Blog" name="blog" cols="10" rows="20"></textarea> 
+                                <textarea class="form-control" placeholder="Subtitle" name="sub_title" cols="10" rows="10"></textarea> 
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Blog" name="blog" cols="10" rows="30"></textarea> 
                             </div>
                         </div>
                         <div class="col-sm-6 text-center">

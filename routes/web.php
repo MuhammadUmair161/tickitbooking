@@ -35,7 +35,7 @@ Route::get('movie-detail/{id}', [movieCotroller::class,'detail'])->name('m-detai
 Route::get('movie-create', [movieCotroller::class,'index'])->name('m-create');
 Route::post('movie-submit', [movieCotroller::class,'submit'])->name('m-submit');
 // -----------Movie
-Route::get('blog', function () {return view('user.blog.blog');})->name('blog');
+Route::get('blog', [blogController::class,'post'])->name('blog');
 Route::get('blog-create', [blogController::class,'index'])->name('blog-create');
 Route::post('blog-submit', [blogController::class,'submit'])->name('blog-submit');
 

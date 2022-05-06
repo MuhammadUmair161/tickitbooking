@@ -1,13 +1,15 @@
 @extends('layouts/user/layout2')
 @section('title', 'Blog')
 @section('main')
-        <!-- ==========Blog-Section========== -->
+    <!-- ==========Blog-Section========== -->
     <section class="blog-section padding-top padding-bottom">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 mb-50 mb-lg-0">
                     <article>
-                        @include('include\user\cards\blog\card')
+                        @foreach ($blog as $item)
+                            @include('include\user\cards\blog\card')
+                        @endforeach
                     </article>
                 </div>
                 <div class="col-lg-4 col-sm-10 col-md-8">
@@ -37,7 +39,8 @@
                                             <a href="#0">Three Ways to Book Sporting Event Tickets</a>
                                         </h6>
                                         <div class="meta-post">
-                                            <a href="#0" class="mr-4"><i class="flaticon-loupe"></i>20 Comments</a>
+                                            <a href="#0" class="mr-4"><i class="flaticon-loupe"></i>20
+                                                Comments</a>
                                             <a href="#0"><i class="flaticon-loupe"></i>466 View</a>
                                         </div>
                                     </div>
