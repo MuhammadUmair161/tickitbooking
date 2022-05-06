@@ -9,11 +9,16 @@ class blogController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('post');
+        $this->middleware('auth')->except(['post','detail']);
     }
     public function index()
     {
         return (view('admin.blog.create'));
+    }
+    public function detail($id)
+    {
+        $data = blog::find($id);
+        return view('user.blog.detail')->with('blog', $data);
     }
     public function post()
     {

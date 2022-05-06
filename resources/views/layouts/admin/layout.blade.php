@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('include/admin/assets/head')
+@include('include\admin\assets\head')
 
 <body class="sidebar-mini ">
     <div class="wrapper">
@@ -10,19 +10,20 @@
                 <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
             </button>
         </div> --}}
+
         <!-- sideNavbar -->
-        @include('include/admin/sideNavbar')
+        @include('include\admin\sideNavbar')
         <div class="main-panel">
-            @include('include/admin/navbar')
+            @include('include\admin\navbar')
             <!-- Navbar -->
             <div class="content">
                 @yield('main')
             </div>
             <!-- footer -->
-            @include('include/admin/footer')
+            @include('include\admin\footer')
         </div>
     </div>
-    <div class="fixed-plugin">
+    {{-- <div class="fixed-plugin">
         <div class="dropdown show-dropdown">
             <a href="#" data-toggle="dropdown">
                 <i class="fa fa-cog fa-2x"> </i>
@@ -78,8 +79,8 @@
                 </li>
             </ul>
         </div>
-    </div>
-    @include('include/admin/assets/script')
+    </div> --}}
+    @include('include\admin\assets\script')
 
 </body>
 

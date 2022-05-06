@@ -17,9 +17,11 @@ use App\Http\Controllers\movieCotroller;
 |
 */
 
-Route::get('/', [homeController::class,'trending'])->name('home');
+Route::get('/', [homeController::class, 'trending'])->name('home');
 // Route::get('/movie', function () {return view('user.movie.index');})->name('movie');
-Route::get('/dashboard', function () {return view('admin.index');})->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('admin.index');
+})->name('dashboard');
 
 // -----------login
 Auth::routes();
@@ -29,15 +31,18 @@ Auth::routes();
 // Route::get('signup', [logincontroller::class,'signup'])->name('signup');
 
 // -----------Movie
-Route::get('movie', [movieCotroller::class,'list'])->name('m-list');
-Route::get('movie-ticketPlan/{id}', [movieCotroller::class,'ticketPlan'])->name('m-ticketPlan');
-Route::get('movie-detail/{id}', [movieCotroller::class,'detail'])->name('m-detail');
-Route::get('movie-create', [movieCotroller::class,'index'])->name('m-create');
-Route::post('movie-submit', [movieCotroller::class,'submit'])->name('m-submit');
-// -----------Movie
-Route::get('blog', [blogController::class,'post'])->name('blog');
-Route::get('blog-create', [blogController::class,'index'])->name('blog-create');
-Route::post('blog-submit', [blogController::class,'submit'])->name('blog-submit');
+Route::get('movie', [movieCotroller::class, 'list'])->name('m-list');
+Route::get('movie-ticketPlan/{id}', [movieCotroller::class, 'ticketPlan'])->name('m-ticketPlan');
+Route::get('movie-detail/{id}', [movieCotroller::class, 'detail'])->name('m-detail');
+// -----------Blog
+Route::get('blog', [blogController::class, 'post'])->name('blog');
+Route::get('blog-detail/{id}', [blogController::class, 'detail'])->name('blog-detail');
 
-
-
+route::prefix('admin')->group(function () {
+    // -----------Movie
+    Route::get('movie-create', [movieCotroller::class, 'index'])->name('m-create');
+    Route::post('movie-submit', [movieCotroller::class, 'submit'])->name('m-submit');
+    // -----------Blog
+    Route::get('blog-create', [blogController::class, 'index'])->name('blog-create');
+    Route::post('blog-submit', [blogController::class, 'submit'])->name('blog-submit');
+});

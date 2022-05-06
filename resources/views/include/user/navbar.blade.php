@@ -9,78 +9,19 @@
                 </div>
                 <ul class="menu">
                     <li>
-                        <a href="{{ route('home') }}" class="active">Home</a>
-                        {{-- <ul class="submenu">
-                            <li>
-                                <a href="index.html">Home One</a>
-                            </li>
-                            <li>
-                                <a href="#0" class="active">Home Two</a>
-                            </li>
-                        </ul> --}}
+                        <a href="{{ route('home') }}" class="">Home</a>
                     </li>
                     <li>
                         <a href="{{ route('m-list') }}">movies</a>
                     </li>
                     <li>
-                        <a href="#0">events</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="events.html">Events</a>
-                            </li>
-                            <li>
-                                <a href="event-details.html">Event Details</a>
-                            </li>
-                            <li>
-                                <a href="event-speaker.html">Event Speaker</a>
-                            </li>
-                            <li>
-                                <a href="event-ticket.html">Event Ticket</a>
-                            </li>
-                            <li>
-                                <a href="event-checkout.html">Event Checkout</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">sports</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="sports.html">Sports</a>
-                            </li>
-                            <li>
-                                <a href="sport-details.html">Sport Details</a>
-                            </li>
-                            <li>
-                                <a href="sports-ticket.html">Sport Ticket</a>
-                            </li>
-                            <li>
-                                <a href="sports-checkout.html">Sport Checkout</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">About Us</a>
-                            </li>
-                            <li>
-                                <a href="apps-download.html">Apps Download</a>
-                            </li>
-                            <li>
-                                <a href="sign-in.html">Sign In</a>
-                            </li>
-                            <li>
-                                <a href="sign-up.html">Sign Up</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
                         <a href="{{ route('blog') }}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('blog') }}">About Us</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('blog') }}">Contact Us</a>
                     </li>
                     <li>
                         <a href="{{ route('dashboard') }}">Dashboard</a>

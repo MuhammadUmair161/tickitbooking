@@ -78,8 +78,12 @@
                         </li>
                         <li class="dropdown-divider"></li>
                         <li class="nav-link">
-                            <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();" class="nav-item dropdown-item">Log out</a>
                         </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </ul>
                 </li>
                 <li class="separator d-lg-none"></li>
