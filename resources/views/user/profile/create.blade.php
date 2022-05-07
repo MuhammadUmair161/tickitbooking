@@ -1,7 +1,7 @@
 @extends('layouts/login/layout')
-@section('title', 'Login')
+@section('title', 'Profile')
 @section('main')
-    <!-- ==========Sign-In-Section========== -->
+    <!-- ==========Profile-Section========== -->
     <section class="account-section bg_img" data-background="{{ asset('user/assets/images/account/account-bg.jpg') }}">
         <div class="container p-5">
             <div class="row justify-content-between">
@@ -16,10 +16,10 @@
                             <input type="text" placeholder="Enter Your Frist Name" name="fname" required="">
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Enter Your Frist Name" name="lname" required="">
+                            <input type="text" placeholder="Enter Your Frist Name" name="lname">
                         </div>
                         <div class="form-group">
-                            <input type="file" name="image" required="">
+                            <input type="file" name="image">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="next">
@@ -30,5 +30,5 @@
         </div>
 
     </section>
-    <!-- ==========Sign-In-Section========== -->
+    <!-- ==========Profile-Section========== -->
 @endsection

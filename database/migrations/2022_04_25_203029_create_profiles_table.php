@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->string('fName');
-            $table->string('lName');
-            $table->text('desc');
+            $table->string('lName')->nullable();
+            $table->text('desc')->nullable();
             $table->unsignedBigInteger('user_id');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

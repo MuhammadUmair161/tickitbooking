@@ -27,9 +27,10 @@ Route::get('/dashboard', function () {
 // -----------login
 Auth::routes();
 // -----------profile
-Route::get('profile', [profileController::class, 'index'])->name('profile');
 Route::get('profile-create', [profileController::class, 'create'])->name('profile-create');
 Route::post('profile-save', [profileController::class, 'save'])->name('profile-save');
+Route::get('profile/{id}', [profileController::class, 'index'])->name('profile');
+Route::get('profile-edit', [profileController::class, 'edit'])->name('profile-edit');
 
 // -----------Movie
 Route::get('movie', [movieCotroller::class, 'list'])->name('m-list');

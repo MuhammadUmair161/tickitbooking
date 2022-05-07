@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('include/user/assets/Head')
+@include('include\user\assets\Head')
 
 <body>
-    @include('include/user/navbar')
+    @include('include\user\navbar')
 
-    @include('include/user/banner/banner')
+    @include('include\user\banner\banner')
 
-    @include('include/user/ticketSearch')
+    @include('include\user\ticketSearch')
 
     @yield('main')
 
