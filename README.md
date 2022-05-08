@@ -2,4 +2,4 @@
 
 About Laravel
 
-Movie tickitbooking webapplication on Laravel.
+Movie ticketbooking webapplication on Laravel.
