@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\aboutsController;
 use App\Http\Controllers\blogController;
+use App\Http\Controllers\contactController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +26,12 @@ Auth::routes();
 //-----------home
 Route::get('/', [homeController::class, 'trending'])->name('home');
 Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
+
+// ----abouts
+Route::get('abouts', [aboutsController::class, 'index'])->name('abouts');
+
+// ----contact
+Route::get('contact', [contactController::class, 'index'])->name('contact');
 
 // -----------profile
 Route::get('profile-create', [profileController::class, 'create'])->name('profile-create');
