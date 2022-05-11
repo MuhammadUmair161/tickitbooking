@@ -46,5 +46,58 @@
                 </form>
             </div>
         </div>
+        <div class="card-body">
+            <div class="table-responsive ps">
+                <table class="table">
+                    <thead class="text-primary">
+                        <tr>
+                            <th class="text-center text-capitalize">
+                                #
+                            </th>
+                            <th class="text-capitalize">
+                                title
+                            </th>
+                            <th class="text-capitalize">
+                                author
+                            </th>
+                            <th class="text-right text-capitalize">
+                                posted at
+                            </th>
+                            <th class="text-right">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($blog as $item)
+                            <tr>
+                                <td class="text-center">
+                                    <div class="photo">
+                                        <img src="{{ asset('storage/' . $item->image) }}" alt="Table image">
+                                    </div>
+                                </td>
+                                <td class="text-capitalize">
+                                    {{ $item->title }}
+                                </td>
+                                <td class="text-capitalize">
+                                    {{ $item->user->name }}
+                                </td>
+                                <td class="text-right">
+                                    {{ $item->created_at }}
+                                </td>
+                                <td class="text-right">
+                                    <a href="{{ route('blog-delete', $item->id) }}" type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm "
+                                        data-original-title="Delete" title="">
+                                        <i class="tim-icons icon-simple-remove"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 @endsection

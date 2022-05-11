@@ -50,4 +50,5 @@ route::prefix('admin')->group(function () {
     // -----------Blog
     Route::get('blog-create', [blogController::class, 'index'])->name('blog-create');
     Route::post('blog-submit', [blogController::class, 'submit'])->name('blog-submit');
+    Route::get('blog-delete/{id}', [blogController::class, 'delete'])->name('blog-delete');
 });

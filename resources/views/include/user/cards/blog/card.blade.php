@@ -26,7 +26,7 @@
                     <div class="thumb">
                         <a href="#0"><img src="{{ asset('user/assets/images/blog/author.jpg') }}" alt="#0"></a>
                     </div>
-                    <h6 class="title"><a href="#0">{{ $item->user->name }}</a></h6>
+                    <h6 class="title"><a href="#">{{ $item->user->name }}</a></h6>
                 </div>
             </div>
             <a href="{{ route('blog-detail',$item->id) }}" class="buttons">Read More <i class="flaticon-right"></i></a>

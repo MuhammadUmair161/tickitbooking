@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class movieCotroller extends Controller
 {
     //-----create
     public function index()
     {
-        $data = movie::all();
+        // $data = movie::all();
+        $data = DB::table('movies')->orderby('id','desc')->get();
         return view('admin.movie.create')->with('movies', $data);
     }
     public function submit(Request $item)
@@ -72,10 +74,11 @@ class movieCotroller extends Controller
         $data = movie::find($id);
         return view('user.movie.detail')->with('movies', $data);
     }
+    //---list
 
     public function list()
     {
-        $data = movie::all();
+        $data = DB::table('movies')->orderby('id','desc')->get();
         return view('user.movie.index')->with('movies', $data);
     }
 }
