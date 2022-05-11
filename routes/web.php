@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\blogController;
+use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
@@ -18,14 +19,12 @@ use App\Http\Controllers\profileController;
 |
 */
 
-Route::get('/', [homeController::class, 'trending'])->name('home');
-// Route::get('/movie', function () {return view('user.movie.index');})->name('movie');
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->name('dashboard');
-
 // -----------login
 Auth::routes();
+//-----------home
+Route::get('/', [homeController::class, 'trending'])->name('home');
+Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
+
 // -----------profile
 Route::get('profile-create', [profileController::class, 'create'])->name('profile-create');
 Route::post('profile-save', [profileController::class, 'save'])->name('profile-save');

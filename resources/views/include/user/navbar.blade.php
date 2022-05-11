@@ -18,10 +18,10 @@
                         <a href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li>
-                        <a href="{{ route('blog') }}">About Us</a>
+                        <a href="{{ route('about') }}">About Us</a>
                     </li>
                     <li>
-                        <a href="{{ route('blog') }}">Contact Us</a>
+                        <a href="{{ route('contact') }}">Contact Us</a>
                     </li>
                     <li>
                         <a href="{{ route('dashboard') }}">Dashboard</a>
