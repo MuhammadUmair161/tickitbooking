@@ -44,6 +44,9 @@ route::prefix('admin')->group(function () {
     // -----------Movie
     Route::get('movie-create', [movieCotroller::class, 'index'])->name('m-create');
     Route::post('movie-submit', [movieCotroller::class, 'submit'])->name('m-submit');
+    Route::get('movie-edit/{id}', [movieCotroller::class, 'edit'])->name('m-edit');
+    Route::post('movie-update', [movieCotroller::class, '_update'])->name('m-update');
+    Route::post('movie-delete', [movieCotroller::class, 'delete'])->name('m-delete');
     // -----------Blog
     Route::get('blog-create', [blogController::class, 'index'])->name('blog-create');
     Route::post('blog-submit', [blogController::class, 'submit'])->name('blog-submit');
