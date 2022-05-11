@@ -10,8 +10,7 @@
                         <span class="cate">profile</span>
                         <h2 class="title">update your profile</h2>
                     </div>
-                    <form class="contact-form" method="post" enctype="multipart/form-data"
-                        action="{{ route('profile-edit') }}">
+                    <form class="contact-form"action="{{ route('profile-edit', $profile->user_id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <input type="text" placeholder="Enter Your Frist Name" value="{{ $profile->fName }}" name="fname" required="">

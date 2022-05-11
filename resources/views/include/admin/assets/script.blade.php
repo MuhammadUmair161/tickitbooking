@@ -1,4 +1,5 @@
 <!--   Core JS Files   -->
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 <script src="{{ asset('admin/assets/js/core/jquery.min.js')}}"></script>
 <script src="{{ asset('admin/assets/js/core/popper.min.js')}}"></script>
 <script src="{{ asset('admin/assets/js/core/bootstrap.min.js')}}"></script>

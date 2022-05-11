@@ -15,7 +15,7 @@ class profileController extends Controller
 
     public function edit(Request $item ,$id)
     {
-        dd('.');
+        // dd('.');
         $profile = Profile::find($id);
         $profile->fName = $item['fname'];
         $profile->lName = $item['lname'];
