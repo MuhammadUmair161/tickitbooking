@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('m-update') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                <form action="{{ route('m-update',$movie->id ) }}" method="post" class="form-horizontal" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-sm-6">
@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                                 <select class="text-capitalize selectpicker p-1" name="language" id="">
-                                    <option class="text-capitalize" disabled="" selected="{{ $movie->language }}">Languag</option>
+                                    <option class="text-capitalize" disabled="" selected="">{{ $movie->language }}</option>
                                     <option value="English">English</option>
                                     <option value="Urdu">Urdu</option>
                                     <option value="Hindi">Hindi</option>
@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <select class="text-capitalize selectpicker p-1" name="genre" id="">
-                                    <option class="text-capitalize" disabled="" selected="">Genre</option>
+                                    <option class="text-capitalize" disabled="" selected="">{{ $movie->genre }}</option>
                                     <option value="Action">Action</option>
                                     <option value="Horror">Horror</option>
                                     <option value="Drama">Drama</option>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-center text-capitalize">
-                        <button type="submit" class="btn btn-primary text-capitalize w-50">save</button>
+                        <button type="submit" class="btn btn-primary text-capitalize w-50">update</button>
                     </div>
                 </form>
             </div>

@@ -39,12 +39,16 @@ class movieCotroller extends Controller
         $movie = movie::find($id);
         $movie->name = $item['name'];
         $movie->desc = $item['desc'];
-        $movie->language = $item['language'];
-        $movie->genre = $item['genre'];
         $movie->released_at = $item['released_at'];
-        // if(){
-            // $movie->poster = $item['poster']->store('uploads/images', 'public');
-        // }
+        if($item['language']!=null){
+            $movie->language = $item['language'];
+        }
+        if($item['genre']!=null){
+            $movie->genre = $item['genre'];
+        }
+        if($item['poster']!=null){
+            $movie->poster = $item['poster']->store('uploads/images', 'public');
+        }
         $movie->trailer = $item['trailer'];
         $movie->update();
         return redirect(route('m-create'));

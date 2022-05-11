@@ -134,10 +134,10 @@
                                         <td class="text-right">
                                             <a href="{{ route('m-edit', $item->id) }}" type="button" rel="tooltip"
                                                 class="btn btn-success btn-link btn-sm btn-icon "
-                                                data-original-title="Refresh" title="">
+                                                data-original-title="Edit" title="">
                                                 <i class="tim-icons icon-refresh-01"></i>
                                             </a>
-                                            <a href="{{ route('m-delete') }}" type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm "
+                                            <a href="{{ route('m-delete', $item->id) }}" type="button" rel="tooltip" class="btn btn-danger btn-link btn-sm "
                                                 data-original-title="Delete" title="">
                                                 <i class="tim-icons icon-simple-remove"></i>
                                             </a>
@@ -147,12 +147,12 @@
 
                             </tbody>
                         </table>
-                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                        {{-- <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
                             <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
                         </div>
                         <div class="ps__rail-y" style="top: 0px; right: 0px;">
                             <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
