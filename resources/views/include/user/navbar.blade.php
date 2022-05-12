@@ -23,9 +23,13 @@
                     <li>
                         <a href="{{ route('contact') }}">Contact Us</a>
                     </li>
-                    <li>
-                        <a href="{{ route('dashboard') }}">Dashboard</a>
-                    </li>
+                    @auth
+                        @if (auth()->user()->role)
+                            <li>
+                                <a href="{{ route('dashboard') }}">Dashboard</a>
+                            </li>
+                        @endif
+                    @endauth
                     @guest
                         @if (Route::has('login'))
                             <li class="header-button pr-0">
@@ -44,7 +48,7 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">Logout</a>
+                                        document.getElementById('logout-form').submit();">Logout</a>
                                 </li>
                             </ul>
                         </li>
