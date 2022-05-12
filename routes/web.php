@@ -6,7 +6,6 @@ use App\Http\Controllers\contactController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\movieCotroller;
 use App\Http\Controllers\profileController;
 
