@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('commits', function (Blueprint $table) {
             $table->id();
             $table->text('commit');
-            $table->integer('contant_id');
+            //**status true as movie review and false as blog commit**
+            $table->boolean('status')->default(false);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
